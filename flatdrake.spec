@@ -1,5 +1,5 @@
 #global gb3_ver %(gbc3 -V)
-%global gb3_ver 3.18.1
+%global gb3_ver 3.18.2
 
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
