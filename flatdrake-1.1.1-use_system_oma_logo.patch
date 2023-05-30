@@ -1,0 +1,11 @@
+--- a/.src/FMAIN.class
++++ b/.src/FMAIN.class
+@@ -184,7 +184,7 @@ Public Sub Form_Open()
+  'CARICA L'IMMAGINE DELLA DISTRO*****************************
+    Shell "lsb_release -d" To $DISTRO
+   If InStr($DISTRO, "OpenMandriva", 0, gb.IgnoreCase) Then
+-      PictureBox1.Picture = Picture.Load("/usr/share/flatdrake/OMA.png")
++      PictureBox1.Picture = Picture.Load("/usr/share/mdk/indexhtml/images/OM-400gr.png")
+      Else 
+        If InStr($DISTRO, "ROSA", 0, gb.IgnoreCase) Then
+        PictureBox1.Picture = Picture.Load("/usr/share/flatdrake/ROSA.png")
