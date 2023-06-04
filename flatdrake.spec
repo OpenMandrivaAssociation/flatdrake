@@ -1,16 +1,14 @@
-#global gb3_ver %(gbc3 -V)
-%global gb3_ver 3.18.2
+%global gb3_ver %(gbc3 -V || echo 3.18.2)
 
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	GPLv3
 Group:		Graphical desktop/KDE
-URL:		https://mib.pianetalinux.org
-#URL:		https://github.com/astrgl/flatdrake
+URL:		https://github.com/astrgl/flatdrake
 Source0:	https://github.com/astrgl/flatdrake/archive/%{version}/%{name}-%{version}.tar.gz
-#Patch0:		flatdrake-1.1.1-use_system_oma_logo.patch 
+Patch0:		flatdrake-1.1.1-use_system_oma_logo.patch
 
 BuildRequires:	gambas3-devel
 BuildRequires:	gambas3-gb-dbus
@@ -69,7 +67,6 @@ install -Dm 0755 %{name}.gambas -t %{buildroot}/%{_bindir}/
 # data files
 install -Dm 0644 FILE-EXTRA/%{name}-* -t %{buildroot}/%{_datadir}/%{name}/
 install -Dm 0644 LINUX.png OMA.png -t %{buildroot}/%{_datadir}/%{name}/
-install -Dm 0644 ICONS-EXTRA/* -t %{buildroot}/%{_datadir}/%{name}/ICONS-EXTRA/
 
 #.desktop
 install -Dm 0755 FILE-EXTRA/%{name}.desktop -t %{buildroot}/%{_datadir}/applications
