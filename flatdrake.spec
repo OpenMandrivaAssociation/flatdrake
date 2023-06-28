@@ -3,12 +3,11 @@
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
 Version:	1.1.1
-Release:	2
+Release:	3
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		https://github.com/astrgl/flatdrake
 Source0:	https://github.com/astrgl/flatdrake/archive/%{version}/%{name}-%{version}.tar.gz
-Patch0:		flatdrake-1.1.1-use_system_oma_logo.patch
 
 BuildRequires:	gambas3-devel
 BuildRequires:	gambas3-gb-dbus
