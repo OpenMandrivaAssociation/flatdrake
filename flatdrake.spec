@@ -1,9 +1,9 @@
-%global gb3_ver %(gbc3 -V || echo 3.18.2)
+%global gb3_ver %(gbc3 -V |cut -d" " -f1 || echo 3.18.3)
 
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
 Version:	1.1.1
-Release:	3
+Release:	4
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		https://github.com/astrgl/flatdrake
