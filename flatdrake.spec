@@ -22,12 +22,12 @@ BuildRequires:	imagemagick
 Requires:	flatpak
 Requires:	gambas-runtime = %{gb3_ver}
 Requires:	gambas-devel = %{gb3_ver}
-Requires:	gambas-gb-dbus = %{gb3_ver}
-Requires:	gambas-gb-form = %{gb3_ver}
-Requires:	gambas-gb-form-stock = %{gb3_ver}
-Requires:	gambas-gb-gtk3 = %{gb3_ver}
-Requires:	gambas-gb-gui = %{gb3_ver}
-Requires:	gambas-gb-image = %{gb3_ver}
+Requires:	gambas-gb.dbus = %{gb3_ver}
+Requires:	gambas-gb.form = %{gb3_ver}
+Requires:	gambas-gb.form.stock = %{gb3_ver}
+Requires:	gambas-gb.gui = %{gb3_ver}
+Requires:	gambas-gb.image = %{gb3_ver}
+Requires:	gambas-gui-backend = %{gb3_ver}
 Requires:	lsb-release
 Requires:	xrandr
 
