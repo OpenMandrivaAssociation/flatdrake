@@ -1,36 +1,33 @@
-#global gb3_ver %((gbcw3 -V |cut -d" " -f1) || echo 3.18.3)
-%global gb3_ver 3.18.3
+%global gb3_ver %(rpm -q --qf '%%{version}' gambas-devel)
 
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
 Version:	1.1.1
-Release:	4
+Release:	5
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		https://mib.pianetalinux.org
 #URL:		https://github.com/astrgl/flatdrake
 Source0:	https://github.com/astrgl/flatdrake/archive/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:	gambas3-devel
-BuildRequires:	gambas3-gb-dbus
-BuildRequires:	gambas3-gb-form
-BuildRequires:	gambas3-gb-form-stock
-BuildRequires:	gambas3-gb-gtk3
-BuildRequires:	gambas3-gb-gui
-BuildRequires:	gambas3-gb-image
-BuildRequires:	gambas3-gb-qt5
+BuildRequires:	gambas-devel
+BuildRequires:	gambas-gb.dbus
+BuildRequires:	gambas-gb.form
+BuildRequires:	gambas-gb.form.stock
+BuildRequires:	gambas-gb.gui
+BuildRequires:	gambas-gb.image
+BuildRequires:	gambas-gui-backend
 BuildRequires:	imagemagick
 
 Requires:	flatpak
-Requires:	gambas3-runtime = %{gb3_ver}
-Requires:	gambas3-devel
-Requires:	gambas3-gb-dbus
-Requires:	gambas3-gb-form
-Requires:	gambas3-gb-form-stock
-Requires:	gambas3-gb-gtk3
-Requires:	gambas3-gb-gui
-Requires:	gambas3-gb-image
-Requires:	gambas3-gb-qt5
+Requires:	gambas-runtime = %{gb3_ver}
+Requires:	gambas-devel = %{gb3_ver}
+Requires:	gambas-gb-dbus = %{gb3_ver}
+Requires:	gambas-gb-form = %{gb3_ver}
+Requires:	gambas-gb-form-stock = %{gb3_ver}
+Requires:	gambas-gb-gtk3 = %{gb3_ver}
+Requires:	gambas-gb-gui = %{gb3_ver}
+Requires:	gambas-gb-image = %{gb3_ver}
 Requires:	lsb-release
 Requires:	xrandr
 
@@ -43,6 +40,7 @@ Powerful like a terminal and simple like a GUI!
 %files
 %license FILE-EXTRA/license
 %{_bindir}/%{name}.gambas
+%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.xpm
@@ -58,7 +56,7 @@ Powerful like a terminal and simple like a GUI!
 gbc3 -e -a -g -t -f public-module -f public-control -j%{?_smp_mflags}
 gba3
 
-# rename binary
+# unversion binary
 mv %{name}-%{version}.gambas %{name}.gambas
 
 %install
@@ -82,4 +80,3 @@ do
 done
 install -dm 0755 %{buildroot}%{_datadir}/pixmaps/
 convert -scale 32x32 %{name}.svg %{buildroot}%{_datadir}/pixmaps/%{name}.xpm
-
