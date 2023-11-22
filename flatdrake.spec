@@ -30,6 +30,7 @@ Requires:	gambas-gb.image = %{gb3_ver}
 Requires:	gambas-gui-backend = %{gb3_ver}
 Requires:	lsb-release
 Requires:	xrandr
+Requires:	draketray
 
 BuildArch: noarch
 
