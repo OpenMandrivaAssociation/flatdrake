@@ -2,8 +2,8 @@
 
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
-Version:	2.1.3
-Release:	6
+Version:	2.2.0
+Release:	1
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		https://mib.pianetalinux.org
