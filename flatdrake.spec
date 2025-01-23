@@ -3,7 +3,7 @@
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
 Version:	2.2.0
-Release:	5
+Release:	6
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		https://mib.pianetalinux.org
@@ -15,6 +15,7 @@ BuildRequires:	gambas-gb.dbus
 BuildRequires:	gambas-gb.form
 BuildRequires:	gambas-gb.form.stock
 BuildRequires:	gambas-gb.gui
+BuildRequires:  gambas-gb.qt6
 BuildRequires:	gambas-gb.image
 BuildRequires:	gambas-gui-backend
 BuildRequires:	imagemagick
@@ -26,6 +27,7 @@ Requires:	gambas-gb.dbus = %{gb3_ver}
 Requires:	gambas-gb.form = %{gb3_ver}
 Requires:	gambas-gb.form.stock = %{gb3_ver}
 Requires:	gambas-gb.gui = %{gb3_ver}
+Requires:  gambas-gb.qt6 = %{gb3_ver}
 Requires:	gambas-gb.image = %{gb3_ver}
 Requires:	gambas-gui-backend = %{gb3_ver}
 Requires:	lsb-release
@@ -33,6 +35,9 @@ Requires:	xrandr
 Requires:	draketray
 
 BuildArch: noarch
+
+%patchlist
+flatdrake-qt6.patch
 
 %description
 FlatDrake is a frontend for FlatPak
