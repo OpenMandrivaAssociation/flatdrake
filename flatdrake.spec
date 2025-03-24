@@ -36,9 +36,6 @@ Requires:	draketray
 
 BuildArch: noarch
 
-%patchlist
-flatdrake-qt6.patch
-
 %description
 FlatDrake is a frontend for FlatPak
 Powerful like a terminal and simple like a GUI!
