@@ -2,7 +2,7 @@
 
 Summary:	FlatDrake is a frontend for FlatPak
 Name:		flatdrake
-Version:	2.4.0
+Version:	2.5.0
 Release:	1
 License:	GPLv3
 Group:		Graphical desktop/KDE
